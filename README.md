@@ -1,3 +1,3 @@
-# Juan Charfuelan
+# Repositorio de Lenguaje de Programacion I
 
-Lenguaje de programacion 1
+Documentacion para la materia de Lenguaje de Programacion I
