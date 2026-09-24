@@ -1,28 +1,25 @@
-import multiprocessing
+import threading
+import random
 import time
 
 
-def print_numbers():
-    """Print numbers from 1 to 5"""
-    for i in range(1, 6):
-        print(f"Number: {i}")
-        time.sleep(1)
+class Sensor(threading.Thread):
+    def __init__(self, nombre: str, ciclos: int) -> None:
+        super().__init__(name=nombre)
+        self.ciclos = ciclos
+        self.lecturas: list[float] = []
+
+    def run(self) -> None:
+        for _ in range(self.ciclos):
+            time.sleep(random.uniform(0.1, 0.3))
+            self.lecturas.append(round(random.uniform(15, 30), 1))
 
 
-def print_letters():
-    """Print numbers from A to E"""
-    for letter in "ABCDE":
-        print(f"Letter: {letter}")
-        time.sleep(1)
+sensores = [Sensor(nombre, 3) for nombre in ("temperatura", "humedad")]
 
-
-if __name__ == "__main__":
-    p1 = multiprocessing.Process(target=print_numbers)
-    p2 = multiprocessing.Process(target=print_letters)
-
-    p1.start()
-    p2.start()
-
-    p1.join()
-    p2.join()
-
+for sensor in sensores:
+    sensor.start()
+for sensor in sensores:
+    sensor.join()
+for sensor in sensores:
+    print(sensor.name, sensor.lecturas)  # cada uno con sus propias lecturas
