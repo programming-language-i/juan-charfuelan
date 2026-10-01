@@ -9,9 +9,8 @@ Práctica de refuerzo sobre lo visto en las clases: concurrencia vs. paralelismo
 | --- | --- |
 | A. Conceptos | 8 preguntas cortas |
 | B. Predecir la salida | 6 fragmentos |
-| C. Encontrar el error | 4 fragmentos que fallan |
+| C. Encontrar el error | 3 fragmentos que fallan |
 | D. ¿Hilos o procesos? | 6 escenarios |
-| E. Programar | 2 ejercicios |
 
 ---
 
