@@ -11,4 +11,3 @@ cliente.send(b"GET / HTTP/1.1\r\nHost: google.com\r\n\r\n")
 resp = cliente.recv(4096)
 print(resp.decode())
 cliente.close()
-

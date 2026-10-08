@@ -10,4 +10,4 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as servidor:
         print("cliente desde", direccion)
         datos = conexion.recv(1024)
         print("recibo:", datos)
-        conexion.sendall(datos.upper())
+        conexion.sendall((datos.upper()))
