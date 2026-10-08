@@ -1,6 +1,6 @@
 import pickle
 
-mensaje = {"emisor": "ana", "contenido": "hola", "etiquetas": ("a", "b")}
+mensaje = {"emisor": "felipe", "contenido": "hola clase", "etiquetas": ("a", "b")}
 
 datos = pickle.dumps(mensaje)  # objeto → bytes
 print(datos[:30], len(datos))

