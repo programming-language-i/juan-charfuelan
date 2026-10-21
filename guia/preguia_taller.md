@@ -574,7 +574,7 @@ líneas escritas: 3000
 
 **Lo que hay en la carpeta:**
 
-```
+```bash
 persistencia-guia/
 ├── persistencia.py   # Evento, a_linea, guardar, desde_linea, eventos, leer, escritor
 ├── consultas.py      # consultas puras sobre cualquier Iterable[Evento]
